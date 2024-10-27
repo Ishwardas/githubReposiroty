@@ -11,7 +11,6 @@ import java.util.Date;
 @NoArgsConstructor
 public class ErrorDto {
     private String msg;
-
     private Date date;
 
     public ErrorDto(String msg, Date date, String url) {
