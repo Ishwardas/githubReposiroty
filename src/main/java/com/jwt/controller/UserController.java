@@ -40,7 +40,9 @@ public class UserController {
     public String getMessage(){
         return "hello";
     }
+    @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody LoginDto dto){
-        appuserService.
+        String token = appuserService.verifyLogin(dto);
+        return new ResponseEntity<>(token,HttpStatus.FORBIDDEN);
     }
 }
